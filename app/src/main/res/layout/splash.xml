@@ -7,10 +7,11 @@
     <ImageView
         android:id="@+id/splash_image"
         android:layout_width="wrap_content"
-        android:layout_height="407dp"
-        app:srcCompat="@drawable/splashscreen1" />
+        android:layout_height="528dp"
+        android:src="@drawable/splash_screen" />
 
     <TextView
+        android:id = "@+id/click_to_start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"

@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">MillionProject</string>
+    <string name="new_game">New Game</string>
+    <string name="christmas">christmas</string>
+    <string name="hong_kong">hong kong</string>
+    <string name="anime">anime</string>
+    <string name="festival">festival</string>
+    <string name="ranking">ranking</string>
 
 </resources>
