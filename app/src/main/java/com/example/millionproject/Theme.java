@@ -1,10 +1,11 @@
 package com.example.millionproject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Theme {
+public class Theme implements Serializable {
     private String themeTitle;
-    private ArrayList<Question> questionList;
+    private ArrayList<Question> questionList = new ArrayList<>();
     private int questionNo = 0;
 
     public Theme(String themeTitle, ArrayList<Question> questions){

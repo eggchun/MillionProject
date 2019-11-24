@@ -1,9 +1,11 @@
 package com.example.millionproject;
 
+import java.io.Serializable;
+
 /**
  * Answer class
  */
-public class Answer {
+public class Answer implements Serializable {
     private String answer;
     private boolean correct;
 

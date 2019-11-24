@@ -7,7 +7,7 @@
     <ImageView
         android:id="@+id/splash_image"
         android:layout_width="wrap_content"
-        android:layout_height="528dp"
+        android:layout_height="486dp"
         android:src="@drawable/splash_screen" />
 
     <TextView

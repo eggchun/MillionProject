@@ -7,17 +7,24 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentActivity;
 
 import java.util.ArrayList;
 
 /**
  * Main Menu page
  */
-public class MainMenu extends Activity {
+public class MainMenu extends FragmentActivity implements UsernameDialogFragment.UsernameDialogListener {
+    private String username = "";
+    private ThemeList themeList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu);
+        themeList = new ThemeList();
 
         // Button list for handle
         ArrayList<Button> themeButtonList = new ArrayList<>();
@@ -30,7 +37,16 @@ public class MainMenu extends Activity {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    showQuestionActivity();
+                    // show dialog and get username
+                    if(username.isEmpty()){
+                        showUsernameInputDialog();
+                    }else{
+                        if(view.getId() == R.id.btn_christmas){
+                            showQuestionActivity(themeList.getThemeList().get(0)); // index 0 => christmas
+                        }else if(view.getId() == R.id.btn_hongkong){
+                            showQuestionActivity(themeList.getThemeList().get(1)); //index 1 => hong kong
+                        }
+                    }
                 }
             });
         }
@@ -49,7 +65,19 @@ public class MainMenu extends Activity {
         return true;
     }
 
-    public void showQuestionActivity(){
-        startActivity(new Intent(this, QuestionActivity.class));
+    public void showQuestionActivity(Theme selctedTheme){
+        Intent intent = new Intent(this, QuestionActivity.class);
+        intent.putExtra("SELECTED THEME", selctedTheme);
+        startActivity(intent);
+    }
+
+    public void showUsernameInputDialog(){
+        DialogFragment dialog = new UsernameDialogFragment();
+        dialog.show(getSupportFragmentManager(), "UsernameDialogFragment");
+    }
+
+    @Override
+    public void onUsernameInput(String username) {
+        this.username = username.trim();
     }
 }
