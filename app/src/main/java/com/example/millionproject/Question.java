@@ -8,6 +8,7 @@ import java.util.ArrayList;
  */
 public class Question implements Serializable {
     private  String title;
+    private  String imgSrc = null;
     private ArrayList<Answer> options = new ArrayList<>();
 
     public Question(String title, Answer[] answers){
@@ -16,6 +17,15 @@ public class Question implements Serializable {
             options.add(answer);
         }
 
+    }
+
+    public Question setImgSrcAndReturnQuestion(String imgSrc){
+        this.imgSrc = imgSrc;
+        return this;
+    }
+
+    public void setImgSrc(String imgSrc) {
+        this.imgSrc = imgSrc;
     }
 
     public void setTitle(String title) {
@@ -32,5 +42,9 @@ public class Question implements Serializable {
 
     public ArrayList<Answer> getOptions() {
         return options;
+    }
+
+    public String getImgSrc() {
+        return imgSrc;
     }
 }

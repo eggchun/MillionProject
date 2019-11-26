@@ -37,7 +37,7 @@ public class ThemeList {
         hongKongQuestions.add(new Question("How many airport runway does Hong Kong have before 2023?", new Answer[]{new Answer("1", false), new Answer("2", true), new Answer("3", false), new Answer("4", false)}));
         hongKongQuestions.add(new Question("How many funding university in Hong Kong?", new Answer[]{new Answer("8", true), new Answer("9", false), new Answer("10", false), new Answer("11", false)}));
         hongKongQuestions.add(new Question("What is the skyscraper ranking of the International Commerce Centre in Hong Kong?", new Answer[]{new Answer("9", false), new Answer("10", false), new Answer("11", false), new Answer("12", true)}));
-        hongKongQuestions.add(new Question("Which building below is not in Hong Kong?", new Answer[]{new Answer("IMG", false), new Answer("IMG", false), new Answer("IMG", true), new Answer("IMG", false)}));
+        hongKongQuestions.add(new Question("For this building, which city is that belongs to?", new Answer[]{new Answer("Sydney", false), new Answer("London", false), new Answer("Hong Kong", true), new Answer("Tokyo", false)}).setImgSrcAndReturnQuestion("question_theme_hongkong_question_7"));
         hongKongQuestions.add(new Question("Which country blow has ruled Hong Kong in the past?", new Answer[]{new Answer("United Kingdom", true), new Answer("Russia", false), new Answer("Taiwan", false), new Answer("U.S.A.", false)}));
         hongKongQuestions.add(new Question("Which country dollar is pegged to HK dollar?", new Answer[]{new Answer("TWD", false), new Answer("USD", true), new Answer("JPY", false), new Answer("GBP", false)}));
         hongKongQuestions.add(new Question("How many people live in Hong Kong? (around)", new Answer[]{new Answer("10 million", false), new Answer("9 million", false), new Answer("8 million", false), new Answer("7 million", true)}));
@@ -62,7 +62,7 @@ public class ThemeList {
 
         ArrayList<Question> festivalQuestion = new ArrayList<>();
         festivalQuestion.add(new Question("What activity will we do in Chung Yeung Festival?", new Answer[]{new Answer("Swimming", false), new Answer("Hiking", true), new Answer("Picnic", false), new Answer("Travelling", false)}));
-        festivalQuestion.add(new Question("What activity that we will not do in Chinese New Year?", new Answer[]{new Answer("IMG", false), new Answer("IMG", false), new Answer("IMG", false), new Answer("IMG", true)}));
+        festivalQuestion.add(new Question("For this action, which festival is that belongs to?", new Answer[]{new Answer("Easter", false), new Answer("Christmas", false), new Answer("Mid-Autumn Festival", false), new Answer("Chinese New Year", true)}).setImgSrcAndReturnQuestion("question_theme_festival_question_2"));
         festivalQuestion.add(new Question("What we will eat in Dragon Boat Festival?", new Answer[]{new Answer("Sweet", false), new Answer("Dumpling", true), new Answer("Noodle", false), new Answer("Meat", false)}));
         festivalQuestion.add(new Question("What is the symbol animal of Easter?", new Answer[]{new Answer("Chicken", false), new Answer("Squirral", false), new Answer("Rabbit", true), new Answer("Tiger", false)}));
         festivalQuestion.add(new Question("How many holiday do Hong Kong has in Christmas generally?", new Answer[]{new Answer("2", true), new Answer("3", false), new Answer("4", false), new Answer("5", false)}));

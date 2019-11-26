@@ -69,9 +69,10 @@ public class MainMenu extends FragmentActivity implements UsernameDialogFragment
         return true;
     }
 
-    public void showQuestionActivity(Theme selctedTheme){
+    public void showQuestionActivity(Theme selectedTheme){
         Intent intent = new Intent(this, QuestionActivity.class);
-        intent.putExtra("SELECTED THEME", selctedTheme);
+        intent.putExtra("selectedTheme", selectedTheme);
+        intent.putExtra("username", username);
         startActivity(intent);
     }
 
@@ -83,5 +84,11 @@ public class MainMenu extends FragmentActivity implements UsernameDialogFragment
     @Override
     public void onUsernameInput(String username) {
         this.username = username.trim();
+        if(!this.username.isEmpty()){
+            Toast.makeText(this, "Welcome " + this.username + "!", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this, "Please re-entry your name!", Toast.LENGTH_SHORT).show();
+        }
+
     }
 }
