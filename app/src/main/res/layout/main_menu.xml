@@ -43,13 +43,13 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_christmas" />
 
     <Button
-        android:id="@+id/btn_anime"
+        android:id="@+id/btn_animal"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:text="@string/anime"
+        android:text="@string/animal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_hongkong" />
@@ -65,7 +65,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_anime" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_animal" />
 
     <Button
         android:id="@+id/btn_ranking"

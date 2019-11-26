@@ -28,7 +28,7 @@ public class MainMenu extends FragmentActivity implements UsernameDialogFragment
 
         // Button list for handle
         ArrayList<Button> themeButtonList = new ArrayList<>();
-        themeButtonList.add((Button)findViewById(R.id.btn_anime));
+        themeButtonList.add((Button)findViewById(R.id.btn_animal));
         themeButtonList.add((Button)findViewById(R.id.btn_christmas));
         themeButtonList.add((Button)findViewById(R.id.btn_festival));
         themeButtonList.add((Button)findViewById(R.id.btn_hongkong));
@@ -45,6 +45,10 @@ public class MainMenu extends FragmentActivity implements UsernameDialogFragment
                             showQuestionActivity(themeList.getThemeList().get(0)); // index 0 => christmas
                         }else if(view.getId() == R.id.btn_hongkong){
                             showQuestionActivity(themeList.getThemeList().get(1)); //index 1 => hong kong
+                        }else if(view.getId() == R.id.btn_animal) {
+                            showQuestionActivity(themeList.getThemeList().get(2)); //index 2 => animal
+                        }else if(view.getId() == R.id.btn_festival) {
+                            showQuestionActivity(themeList.getThemeList().get(3)); //index 3 => festival
                         }
                     }
                 }

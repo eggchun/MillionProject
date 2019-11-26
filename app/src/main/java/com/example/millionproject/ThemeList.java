@@ -44,6 +44,36 @@ public class ThemeList {
 
         themeList.add(new Theme("Hong Kong", hongKongQuestions));
         themeCount++;
+
+        ArrayList<Question> animalQuestion = new ArrayList<>();
+        animalQuestion.add(new Question("A group of wolves is called as _____?", new Answer[]{new Answer("Destruction", false), new Answer("Pack", true), new Answer("Band", false), new Answer("Troop", false)}));
+        animalQuestion.add(new Question("Which animal has the highest blood pressure?", new Answer[]{new Answer("Buffalo", false), new Answer("Dolphin", false), new Answer("Horse", false), new Answer("Giraffe", true)}));
+        animalQuestion.add(new Question("How many hearts does an octopus have?", new Answer[]{new Answer("3", true), new Answer("5", false), new Answer("2", false), new Answer("4", false)}));
+        animalQuestion.add(new Question("How long can a snail sleep for?", new Answer[]{new Answer("10 days", false), new Answer("3 years", true), new Answer("2 months", false), new Answer("1 years", false)}));
+        animalQuestion.add(new Question("What is a group of elephant called?", new Answer[]{new Answer("Herd", true), new Answer("Colony", false), new Answer("Troop", false), new Answer("Family", false)}));
+        animalQuestion.add(new Question("Which animal does not drink water?", new Answer[]{new Answer("Garden snail", false), new Answer("Honey bee", false), new Answer("Kangaroo rat", true), new Answer("Bullfrog", false)}));
+        animalQuestion.add(new Question("What is a baby alpaca called?", new Answer[]{new Answer("Joey", false), new Answer("Calf", false), new Answer("Cria", true), new Answer("Whelp", false)}));
+        animalQuestion.add(new Question("Which mammal has the longest gestation period?", new Answer[]{new Answer("Giraffe", false), new Answer("Rhinoceros", false), new Answer("Hippopotamus", false), new Answer("Elephant", true)}));
+        animalQuestion.add(new Question("What are female dolphins called?", new Answer[]{new Answer("Bulls", false), new Answer("Cows", true), new Answer("Calves", false), new Answer("Doe", false)}));
+        animalQuestion.add(new Question("How many eyes does honey bee have?", new Answer[]{new Answer("5", true), new Answer("4", false), new Answer("2", false), new Answer("3", false)}));
+
+        themeList.add(new Theme("Animal", animalQuestion));
+        themeCount++;
+
+        ArrayList<Question> festivalQuestion = new ArrayList<>();
+        festivalQuestion.add(new Question("What activity will we do in Chung Yeung Festival?", new Answer[]{new Answer("Swimming", false), new Answer("Hiking", true), new Answer("Picnic", false), new Answer("Travelling", false)}));
+        festivalQuestion.add(new Question("What activity that we will not do in Chinese New Year?", new Answer[]{new Answer("IMG", false), new Answer("IMG", false), new Answer("IMG", false), new Answer("IMG", true)}));
+        festivalQuestion.add(new Question("What we will eat in Dragon Boat Festival?", new Answer[]{new Answer("Sweet", false), new Answer("Dumpling", true), new Answer("Noodle", false), new Answer("Meat", false)}));
+        festivalQuestion.add(new Question("What is the symbol animal of Easter?", new Answer[]{new Answer("Chicken", false), new Answer("Squirral", false), new Answer("Rabbit", true), new Answer("Tiger", false)}));
+        festivalQuestion.add(new Question("How many holiday do Hong Kong has in Christmas generally?", new Answer[]{new Answer("2", true), new Answer("3", false), new Answer("4", false), new Answer("5", false)}));
+        festivalQuestion.add(new Question("What is the date of Valentine's Day?", new Answer[]{new Answer("11-Feb", false), new Answer("12-Feb", false), new Answer("13-Feb", false), new Answer("14-Feb", true)}));
+        festivalQuestion.add(new Question("What flower we will give in Mother's day?", new Answer[]{new Answer("Carnation", true), new Answer("Rose", false), new Answer("Chrysanthemum", false), new Answer("Peony", false)}));
+        festivalQuestion.add(new Question("Which country does Hou Li Festival belong to?", new Answer[]{new Answer("China", false), new Answer("Malaysia", false), new Answer("India", true), new Answer("Indonesia", false)}));
+        festivalQuestion.add(new Question("Which country does Songkran Water Festival belong to?", new Answer[]{new Answer("Japan", false), new Answer("TaiWan", false), new Answer("Philippines", false), new Answer("Thailand", true)}));
+        festivalQuestion.add(new Question("How old is a person to be an adult in Coming of Age Day of Japan?", new Answer[]{new Answer("18", false), new Answer("19", false), new Answer("20", true), new Answer("21", false)}));
+
+        themeList.add(new Theme("Festival", festivalQuestion));
+        themeCount++;
     }
 
     public ArrayList<Theme> getThemeList() {
