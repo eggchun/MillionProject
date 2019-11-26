@@ -138,7 +138,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/result_ranking_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ranking" />
