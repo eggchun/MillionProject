@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/ranking_user_name_span"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Username: " />
+
+    <TextView
+        android:id="@+id/ranking_user_score_span"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ranking_user_name_span"
+        android:gravity="center"
+        android:text="Score: " />
+
+    <TextView
+        android:id="@+id/ranking_user_time_span"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ranking_user_score_span"
+        android:gravity="center"
+        android:text="Time used: " />
+
+    <TextView
+        android:id="@+id/ranking_user_name"
+        android:layout_width="312dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="0dp"
+        android:layout_toStartOf="@+id/ranking_user_name_span"
+        android:gravity="center_vertical"
+        android:text="Username: " />
+
+    <TextView
+        android:id="@+id/ranking_user_score"
+        android:layout_width="312dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ranking_user_name"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="5dp"
+        android:layout_toStartOf="@+id/ranking_user_score_span"
+        android:gravity="center_vertical"
+        android:text="Score: " />
+
+    <TextView
+        android:id="@+id/ranking_user_time"
+        android:layout_width="313dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/ranking_user_score"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="5dp"
+        android:layout_toStartOf="@+id/ranking_user_time_span"
+        android:gravity="center_vertical"
+        android:text="Time: " />
+
+
+
+</RelativeLayout>

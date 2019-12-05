@@ -20,8 +20,10 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 
-public class QuestionActivity extends Activity {
+
+public class QuestionActivity extends AppCompatActivity {
     private int indexOfQuestion = 0;
     private int numberOfQuestion = 0;
     private Theme selectedTheme;

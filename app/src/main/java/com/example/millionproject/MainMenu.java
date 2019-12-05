@@ -1,14 +1,18 @@
 package com.example.millionproject;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentActivity;
 
@@ -17,7 +21,7 @@ import java.util.ArrayList;
 /**
  * Main Menu page
  */
-public class MainMenu extends FragmentActivity implements UsernameDialogFragment.UsernameDialogListener {
+public class MainMenu extends AppCompatActivity implements UsernameDialogFragment.UsernameDialogListener {
     private String username = "";
     private ThemeList themeList;
     @Override
@@ -54,19 +58,16 @@ public class MainMenu extends FragmentActivity implements UsernameDialogFragment
                 }
             });
         }
-//        Spinner spinner = (Spinner) findViewById(R.id.spinner);
-//        final String[] theme = {"Christmas", "Hong Kong", "Anime", "Festival"};
-//        ArrayAdapter<String> themeList = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_spinner_dropdown_item, theme);
-//        spinner.setAdapter(themeList);
 
 
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_menu, menu);
-        return true;
+        // Ranking button
+        Button rankingBtn = findViewById(R.id.btn_ranking);
+        rankingBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showRankingActivity();
+            }
+        });
     }
 
     public void showQuestionActivity(Theme selectedTheme){
@@ -91,4 +92,34 @@ public class MainMenu extends FragmentActivity implements UsernameDialogFragment
         }
 
     }
+
+    public void showRankingActivity(){
+        Intent intent = new Intent(this, RankingActivity.class);
+        startActivity(intent);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("About the app.")
+                .setMessage("2019 Android Development Group Project by Michael, KK and Emma.")
+                .setPositiveButton("OK" , new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                    }
+                })
+                .show();
+
+        return super.onOptionsItemSelected(item);
+    }
+
 }
