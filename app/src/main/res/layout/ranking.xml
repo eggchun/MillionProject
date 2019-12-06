@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_toStartOf="@+id/spinner_theme"
+        android:layout_toStartOf="@+id/ranking_listview"
         android:text="NO RANKING AVAILABLE!"
         android:textColor="#525252"
         android:textSize="19.0sp"

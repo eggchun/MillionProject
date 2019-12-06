@@ -36,6 +36,8 @@ public class RankingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ranking);
 
+        listView = findViewById(R.id.ranking_listview);
+
         // spinner prepare and handling
         themSpinner = findViewById(R.id.spinner_theme);
         showSpinner(new ThemeList().getThemeList());
@@ -53,14 +55,9 @@ public class RankingActivity extends AppCompatActivity {
         });
 
 
-        // List view data and show
-        listView = findViewById(R.id.ranking_listview);
+        // List view
         allUserList = getUserList();
-        if(listView != null){
-            for(User user: allUserList){
-                selectedUserList.add(user);
-            }
-        }
+        filterUserList(selectedTheme);
         adapter = new Ranking_User_Adapter(selectedUserList, getApplicationContext());
         listView.setAdapter(adapter);
         listView.setEmptyView(findViewById(R.id.ranking_listview_empty));
@@ -113,10 +110,12 @@ public class RankingActivity extends AppCompatActivity {
     }
 
     public void filterUserList(String selectedTheme){
-        selectedUserList.clear();
-        for(User user: allUserList){
-            if(user.getAnsweredTheme().equals(selectedTheme)){
-                selectedUserList.add(user);
+        if(allUserList != null){
+            selectedUserList.clear();
+            for(User user: allUserList){
+                if(user.getAnsweredTheme().equals(selectedTheme)){
+                    selectedUserList.add(user);
+                }
             }
         }
     }
